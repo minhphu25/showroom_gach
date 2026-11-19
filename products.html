@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tiêu đề mặc định (Sẽ được script.js tự động cập nhật qua dynamic SEO từ seo.json) -->
+    <title>
+      Danh Mục Sản Phẩm Gạch Ốp Lát & Thiết Bị Vệ Sinh | Gạch Men Hưng Thịnh
+    </title>
+    <meta
+      name="description"
+      content="Khám phá bộ sưu tập hơn 500+ mẫu gạch lát nền bóng kiếng, gạch xương bán sứ giả gỗ, gạch trang trí nghệ thuật và thiết bị vệ sinh cao cấp tại Hưng Thịnh."
+    />
+    <meta
+      name="keywords"
+      content="danh mục gạch men, gạch bóng kiếng 80x80, gạch lát nền 60x60, gạch giả gỗ cao cấp, gạch mosaic trang trí, bồn cầu thông minh, sen cây tắm"
+    />
+    <meta
+      property="og:title"
+      content="Danh Mục Sản Phẩm Gạch Ốp Lát & Thiết Bị Vệ Sinh | Gạch Men Hưng Thịnh"
+    />
+    <meta
+      property="og:description"
+      content="Tìm kiếm mẫu gạch hoàn hảo cho ngôi nhà bạn với công cụ tìm kiếm và lọc thông minh theo kích thước, chất liệu và mức giá ưu đãi."
+    />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=1200&q=80"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome 6 Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- CSS Thuần Duy Nhất -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ================= HEADER DÙNG CHUNG ================= -->
+  <div id="site-header"></div>
+
+    <!-- ================= BANNER TRANG CON ================= -->
+    <div class="page-hero">
+      <div class="container">
+        <h1 class="page-title">Bộ Sưu Tập Gạch Ốp Lát & Thiết Bị Vệ Sinh</h1>
+        <div class="breadcrumbs">
+          <a href="index.html">Trang chủ</a>
+          <i class="fa-solid fa-chevron-right text-xs"></i>
+          <span>Danh mục sản phẩm</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Anchor để cuộn khi chuyển trang -->
+    <div id="products-layout-top"></div>
+
+    <!-- ================= BỐ CỤC CHÍNH TRANG SẢN PHẨM ================= -->
+    <section class="products-layout-wrapper">
+      <div class="container">
+        <!-- Nút mở bộ lọc trên thiết bị di động -->
+        <button
+          class="btn btn-outline mobile-filter-trigger"
+          id="mobile-filter-trigger"
+        >
+          <i class="fa-solid fa-filter"></i> Mở Bộ Lọc & Tìm Kiếm Sản Phẩm
+        </button>
+
+        <div class="products-layout">
+          <!-- ================= CỘT BÊN TRÁI: SIDEBAR FILTER ================= -->
+          <aside class="filter-sidebar" id="filter-sidebar">
+            <div class="filter-header">
+              <h3>
+                <i class="fa-solid fa-sliders text-primary"></i> Bộ Lọc Tìm Kiếm
+              </h3>
+              <button class="btn-reset-filter" id="btn-reset-filters">
+                <i class="fa-solid fa-rotate-left"></i> Đặt lại
+              </button>
+              <!-- Nút đóng trên mobile -->
+              <button
+                id="close-filter-sidebar"
+                class="btn-sm"
+                style="
+                  display: none;
+                  font-size: 1.4rem;
+                  color: var(--dark);
+                  margin-left: auto;
+                "
+              >
+                &times;
+              </button>
+            </div>
+
+            <!-- 1. Tìm kiếm (Live Search) -->
+            <div class="filter-group">
+              <h4 class="filter-title">Tìm theo tên</h4>
+              <div class="search-box">
+                <input
+                  type="text"
+                  id="product-search-input"
+                  class="search-input"
+                  placeholder="Nhập tên gạch, kích thước..."
+                  autocomplete="off"
+                />
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+              </div>
+            </div>
+
+            <!-- 2. Lọc theo Danh mục -->
+            <div class="filter-group">
+              <h4 class="filter-title">Danh mục sản phẩm</h4>
+              <div class="filter-options">
+                <label class="filter-label">
+                  <input
+                    type="radio"
+                    name="category-filter"
+                    value="all"
+                    checked
+                  />
+                  <span>Tất cả danh mục (20)</span>
+                </label>
+                <label class="filter-label">
+                  <input
+                    type="radio"
+                    name="category-filter"
+                    value="Gạch lát nền bóng kiếng"
+                  />
+                  <span>Gạch lát nền bóng kiếng (5)</span>
+                </label>
+                <label class="filter-label">
+                  <input
+                    type="radio"
+                    name="category-filter"
+                    value="Gạch giả gỗ"
+                  />
+                  <span>Gạch vân gỗ cao cấp (5)</span>
+                </label>
+                <label class="filter-label">
+                  <input
+                    type="radio"
+                    name="category-filter"
+                    value="Gạch trang trí"
+                  />
+                  <span>Gạch trang trí & Mosaic (5)</span>
+                </label>
+                <label class="filter-label">
+                  <input
+                    type="radio"
+                    name="category-filter"
+                    value="Thiết bị vệ sinh"
+                  />
+                  <span>Thiết bị vệ sinh thông minh (5)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- 3. Lọc theo Mức giá -->
+            <div class="filter-group">
+              <h4 class="filter-title">Mức giá ngân sách</h4>
+              <div class="filter-options">
+                <label class="filter-label">
+                  <input type="radio" name="price-filter" value="all" checked />
+                  <span>Tất cả mức giá</span>
+                </label>
+                <label class="filter-label">
+                  <input type="radio" name="price-filter" value="under-300k" />
+                  <span>Dưới 300.000 đ</span>
+                </label>
+                <label class="filter-label">
+                  <input type="radio" name="price-filter" value="300k-500k" />
+                  <span>300.000 đ - 500.000 đ</span>
+                </label>
+                <label class="filter-label">
+                  <input type="radio" name="price-filter" value="500k-1000k" />
+                  <span>500.000 đ - 1.000.000 đ</span>
+                </label>
+                <label class="filter-label">
+                  <input type="radio" name="price-filter" value="over-1000k" />
+                  <span>Trên 1.000.000 đ (Thiết bị)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Banner hỗ trợ tư vấn tại sidebar -->
+            <div
+              style="
+                background-color: var(--secondary-light);
+                padding: 1.25rem;
+                border-radius: var(--radius-md);
+                border-left: 4px solid var(--secondary);
+                margin-top: 1.5rem;
+              "
+            >
+              <strong
+                style="
+                  color: var(--secondary);
+                  font-size: 0.95rem;
+                  display: block;
+                  margin-bottom: 0.35rem;
+                "
+              >
+                <i class="fa-solid fa-headset"></i> Cần tư vấn mẫu thực tế?
+              </strong>
+              <p
+                style="
+                  font-size: 0.8rem;
+                  color: var(--text-main);
+                  margin-bottom: 0.75rem;
+                "
+              >
+                Chụp ảnh bản vẽ hoặc kích thước phòng gửi qua Zalo để kỹ sư Hưng
+                Thịnh tư vấn mẫu gạch phù hợp nhất.
+              </p>
+              <a
+                href="https://zalo.me/0912345678"
+                target="_blank"
+                class="btn btn-secondary btn-sm btn-block"
+              >
+                <i class="fa-solid fa-comment-dots"></i> Chat Zalo Ngay
+              </a>
+            </div>
+          </aside>
+
+          <!-- ================= CỘT BÊN PHẢI: LƯỚI SẢN PHẨM ================= -->
+          <main class="products-main-content">
+            <!-- Thanh công cụ phía trên danh sách -->
+            <div class="product-grid-header">
+              <div class="product-count" id="products-count-text">
+                Đang tải danh sách sản phẩm...
+              </div>
+              <div class="product-sort-box">
+                <label for="product-sort-select">Sắp xếp theo:</label>
+                <select id="product-sort-select" class="sort-select">
+                  <option value="default">Mặc định (Mới nhất)</option>
+                  <option value="price-asc">Giá: Thấp đến cao</option>
+                  <option value="price-desc">Giá: Cao đến thấp</option>
+                  <option value="name-asc">Tên sản phẩm: A - Z</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Container lưới sản phẩm (Sẽ được JavaScript render động từ mảng JSON 20 sản phẩm) -->
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+              id="products-grid"
+            >
+              <!-- JavaScript sẽ chèn 8 thẻ sản phẩm tương ứng với trang hiện tại vào đây -->
+            </div>
+
+            <!-- Thanh phân trang động (Pagination Controls) -->
+            <div class="pagination-container" id="pagination-wrapper">
+              <!-- Nút Prev, 1, 2, Next được render tự động bằng JS -->
+            </div>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER DÙNG CHUNG ================= -->
+  <div id="site-footer"></div>
+
+    <!-- Dữ liệu sản phẩm độc lập -->
+    <script src="products-data.js"></script>
+    <!-- Core JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
